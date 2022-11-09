@@ -1,0 +1,26 @@
+.diary-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 1rem;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.text {
+    height: 150px;
+}
+
+.text, .date, .rubrik {
+    background-color: lavender;
+}
+
+button {
+    background-color: blueviolet;
+    height: 50px;
+    color: white;
+}
