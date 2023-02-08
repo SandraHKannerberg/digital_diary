@@ -1,13 +1,8 @@
-//Vi utvecklar en dagbok för oss själva. Våra dagboksinlägg skall sparas i localStorage så att vi kan återkomma 
-//till sidan vid ett senare tillfälle och skriva nya inlägg. 
-//När vi skapar ett inlägg så skall vi kunna ändra och skriva datum, rubrik samt en text.
-//Alla skriva inlägg skall sedan visas i kronologiskt ordning på sidan under formuläret.
-
 const inputDate = document.querySelector(".date");
 inputDate.valueAsDate = new Date();
 
-const inputHeading = document.querySelector(".rubrik");
-const inputText = document.querySelector("textarea");
+const inputTitle = document.querySelector(".entry-text-title");
+const inputText = document.querySelector(".entry-text-box");
 const addDayBtn = document.querySelector("button");
 const entriesContainer = document.querySelector(".entries-container")
 
@@ -15,7 +10,7 @@ addDayBtn.addEventListener("click", () => {
 
     const entry = {
         date: inputDate.value,
-        heading: inputHeading.value,
+        title: inputTitle.value,
         text: inputText.value,
     }
 
@@ -27,7 +22,7 @@ addDayBtn.addEventListener("click", () => {
         localStorage.setItem("entries", JSON.stringify(entries));
     }
 
-    inputHeading.value = "";
+    inputTitle.value = "";
     inputText.value = "";
     renderEntries();
 
@@ -41,18 +36,27 @@ function renderEntries() {
 
     entriesContainer.innerHTML = "";
 
+    const journalHeading = document.createElement("h2");
+    journalHeading.innerText ="Memories"
+    entriesContainer.appendChild(journalHeading);
+
     entries.forEach((entry) => {
         const div = document.createElement("div");
-        const h6 = document.createElement("h6");
-        const h4 = document.createElement("h4");
+        const headingDiv = document.createElement("div");
+        const date = document.createElement("h3");
+        const title = document.createElement("h3");
         const p = document.createElement("p");
 
-        h6.innerText = entry.date;
-        h4.innerText = entry.heading;
+        div.setAttribute('class', 'singel-day-container');
+        headingDiv.setAttribute('class', 'headingDiv');
+
+        date.innerText = entry.date;
+        title.innerText = entry.title;
         p.innerText = entry.text;
 
-        div.appendChild(h6);
-        div.appendChild(h4);
+        div.appendChild(headingDiv);
+        headingDiv.appendChild(date);
+        headingDiv.appendChild(title);
         div.appendChild(p);
 
         entriesContainer.appendChild(div);

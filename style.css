@@ -1,26 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Ubuntu+Mono&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    line-height: 1.6;
+    color: #783937FF;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+    background: rgb(247, 151, 142);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+  }
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.title-label, .date-label, .text-label {
+    display: block;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.entry-text-title, .date {
+    width: 20em;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: #F1AC88FF;
+    font-family: 'Ubuntu Mono', monospace;
+}
+  
+.entry-text-title:focus {
+    outline-color: #783937FF;
+    color: #783937FF;
+    font-size: 1.2rem;
+}
+  
+.entry-text-title::placeholder {
+    color: #783937FF;
+    font-size: 1rem;
+}
+  
+.entry-text-title::-ms-value {
+    color: #783937FF;
+    font-size: 1rem;
+}
+
+.entry-text-box {
+    width: 100%;
+    height: 20em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: #F1AC88FF;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
 .diary-container {
     display: flex;
     flex-direction: column;
     width: 500px;
     gap: 1rem;
-    border: 2px solid black;
-    padding: 10px;
+    background: #FC766AFF;
+    border: 5px dotted #783937FF;
+    border-radius: 15px;
+    padding: 20px;
+    margin: auto;
 }
 
-h2 {
-    text-align: center;
+.entries-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
 }
 
-.text {
-    height: 150px;
+.singel-day-container {
+    margin-top: 0;
+    padding: 20px;
+    border: 5px dotted #F1AC88FF;
+    background: #FC766AFF;
+    border-radius: 15px;
 }
 
-.text, .date, .rubrik {
-    background-color: lavender;
+.headingDiv {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 450px;
 }
+
+
 
 button {
-    background-color: blueviolet;
+    background-color: #783937FF;
+    font-family: 'Ubuntu Mono', monospace;
     height: 50px;
+    width: 175px;
     color: white;
+    border: 1px solid #783937FF;
+    border-radius: 20px;
+    border-top-left-radius: 0;
 }

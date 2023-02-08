@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Dagboken</title>
+    <title>My Digital Diary</title>
 </head>
 <body>
 
     <div class="diary-container">
-        <h2>DAGBOK</h2>
-        <label for="">Date:</label>
+        <h1>Write something today...</h1>
+        <label for="date" class="date-label">Todays Date</label>
         <input class="date" type="date">
-        <label for="">Title:</label>
-        <input class="rubrik" type="text">
-        <label for="">Entry:</label>
-        <textarea cols="50" rows="20"></textarea>
-        <button>Spara denna dag</button>
+        <label for="entry-title" class="title-label">Entry Title</label>
+        <input class="entry-text-title" type="text" placeholder="Name of entry ✏️">
+        <label for="entry-text" class="text-label">Todays Entry</label>
+        <textarea class="entry-text-box" placeholder="Whats on your mind today? 💭"></textarea>
+        <button>Remember this day</button>
     </div>
 
     <div class="entries-container"></div>
