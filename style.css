@@ -15,12 +15,18 @@ html {
 body {
     font-family: 'Ubuntu Mono', monospace;
     line-height: 1.6;
-    color: #85586F;
+    color: #ffcf0d;
     margin: 0 auto;
     padding: 0;
     max-width: 900px;
-    background-image: url("/assets/background.jpg");
-    background-size: cover;
+    background-image: conic-gradient(
+        at 125% 50%,
+        #b78cf7,
+        #ff7c94,
+        #ffcf0d,
+        #ff7c94,
+        #b78cf7
+    );
 }
 
 h1 {
@@ -53,18 +59,19 @@ p {
     width: 20em;
     padding: 1em;
     border-radius: 2px;
-    border: 1px solid #85586F;
+    border: 1px solid #ffcf0d;
     background-color: #F8EDE3;
     font-family: 'Ubuntu Mono', monospace;
+    border-radius: 15px;
 }
   
 .entry-text-title::placeholder {
-    color: #85586F;
+    color: black;
     font-size: 1rem;
 }
   
 .entry-text-title::-ms-value {
-    color: #85586F;
+    color:  #b78cf7;
     font-size: 1rem;
 }
 
@@ -74,23 +81,32 @@ p {
     margin: 1em auto;
     padding: 1em;
     border-radius: 2px;
-    border: 1px solid #85586F;
+    border: 1px solid #ffcf0d;
     background-color: #F8EDE3;
     font-family: 'Ubuntu Mono', monospace;
-    color: #85586F;
+    color: black;
+    border-radius: 15px;
   }
 
 .diary-container {
     display: flex;
     flex-direction: column;
     width: 500px;
+    height: 100vh;
     gap: 1rem;
-    background: #DFD3C3;
-    border: 5px dotted #85586F;
+    background-image: conic-gradient(
+        at 125% 50%,
+        #b78cf7,
+        #ff7c94,
+        #ffcf0d,
+        #ff7c94,
+        #b78cf7
+    );
     border-radius: 15px;
     padding: 20px;
     margin: auto;
-    box-shadow: #D0B8A8 0px 7px 29px 0px; 
+    box-shadow: #ffcf0d 0px 7px 29px 0px;
+    border: 1px solid #ffcf0d;
 }
 
 .entries-container {
@@ -104,10 +120,10 @@ p {
 .singel-day-container {
     margin-top: 0;
     padding: 20px;
-    border: 5px dotted  #85586F;
-    background:  #DFD3C3;
+    border: 1px solid #ffcf0d;
+    background: #ff7c94;
     border-radius: 15px;
-    box-shadow: #D0B8A8 0px 7px 29px 0px; 
+    box-shadow: #ffcf0d 0px 7px 29px 0px;
 }
 
 .headingDiv {
@@ -119,12 +135,15 @@ p {
 }
 
 button {
-    background-color: #85586F;
+    background-color: #ff7c94;
+    color:#ffcf0d;
     font-family: 'Ubuntu Mono', monospace;
-    height: 50px;
+    height: 70px;
     width: 175px;
-    color: white;
-    border: 1px solid #85586F;
+    border: 1px solid #ffcf0d;
     border-radius: 20px;
     border-top-left-radius: 0;
+    box-shadow: #ffcf0d 0px 7px 29px 0px; 
+    cursor: pointer;
+    font-weight: bold;
 }
